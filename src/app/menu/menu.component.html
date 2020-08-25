@@ -1,0 +1,21 @@
+<header>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div>
+            <a href="https://www.google.co.in" class="navbar-brand">google</a>
+
+        </div>
+
+        <ul class="navbar-nav">
+            <li><a *ngIf="hardcodedAuthenticationService.ifUserLoggedIn()" routerLink="/welcome/Avanish" class="nav-link">HOME</a></li>
+            <li><a *ngIf="hardcodedAuthenticationService.ifUserLoggedIn()" routerLink="/todos" class="nav-link">TODOS</a></li>
+
+        </ul>
+
+        <ul class="navbar-nav navbar-collapse justify-content-end">
+            <li><a *ngIf="!hardcodedAuthenticationService.ifUserLoggedIn()" routerLink="/login" class="nav-link">LOGIN</a></li>
+            <li><a *ngIf="hardcodedAuthenticationService.ifUserLoggedIn()" routerLink="/logout" class="nav-link">LOGOUT</a></li>
+
+        </ul>
+
+    </nav>
+</header>
